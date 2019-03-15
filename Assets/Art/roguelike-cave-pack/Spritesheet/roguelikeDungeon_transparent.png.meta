@@ -42,7 +42,7 @@ TextureImporter:
     21300074: roguelikeDungeon_transparent_37
     21300076: roguelikeDungeon_transparent_38
     21300078: roguelikeDungeon_transparent_39
-    21300080: roguelikeDungeon_transparent_40
+    21300080: outerwall_v
     21300082: outerwall_bl
     21300084: outerwall_br
     21300086: roguelikeDungeon_transparent_43
@@ -1417,7 +1417,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeDungeon_transparent_40
+      name: outerwall_v
       rect:
         serializedVersion: 2
         x: 187
