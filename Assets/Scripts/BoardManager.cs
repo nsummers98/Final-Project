@@ -105,6 +105,6 @@ public class BoardManager : MonoBehaviour
         LayoutObjectAtRandom(healthRunes, healthCount.minimum, healthCount.maximum);
         LayoutObjectAtRandom(collectRunes, 10, 10);
         LayoutObjectAtRandom(monster, 1, 1);
-        Instantiate(exit, new Vector3(columns - 1.5f, rows + 0.5f, 0f), Quaternion.identity);
+        Instantiate(exit, new Vector3(columns - 1.5f, rows + 1f, 0f), Quaternion.identity);
     }
 }
