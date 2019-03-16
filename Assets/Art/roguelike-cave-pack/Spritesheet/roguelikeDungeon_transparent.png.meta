@@ -6840,8 +6840,8 @@ TextureImporter:
       name: door_open_tl
       rect:
         serializedVersion: 2
-        x: 359
-        y: 118
+        x: 357
+        y: 119
         width: 16
         height: 16
       alignment: 0

@@ -10,23 +10,27 @@ public class Player : MonoBehaviour
     public float restartLevelDelay = 1f;
     public float playerSpeed = 7f;
     public LayerMask BlockingLayer;
-    public Component[] open_sprites;
+    public Text healthText;
+    public Text collectText;
 
+    private Door door;
+    private bool doorOpen = false;
     private BoxCollider2D bc2D;
     private Rigidbody2D rb2D;
     private List<Monster> monsters;
-    private GameObject door;
     private int hp;
     private int runesCollected = 0;
 
 
     void Start()
     {
+        door = Door.instance;
         bc2D = gameObject.GetComponent<BoxCollider2D>();
         rb2D = gameObject.GetComponent<Rigidbody2D>();
         monsters = GameManager.instance.monsters;
-        door = GameObject.FindGameObjectWithTag("Exit");
         hp = GameManager.instance.playerHP;
+        healthText.text = "Health: " + hp;
+        collectText.text = "Runes: " + runesCollected;
     }
 
     private void OnDisable()
@@ -36,6 +40,9 @@ public class Player : MonoBehaviour
     
     void Update()
     {
+        healthText.text = "Health: " + hp;
+        collectText.text = "Runes: " + runesCollected;
+        CheckIfDoorOpen();
         PlayerMove();
     }
 
@@ -92,6 +99,8 @@ public class Player : MonoBehaviour
 
     }
 
+    //TODO: Enemy/Player Interactions
+
     private void Restart()
     {
         SceneManager.LoadScene(0);
@@ -111,13 +120,10 @@ public class Player : MonoBehaviour
 
     void CheckIfDoorOpen()
     {
-        if (runesCollected == 10)
-        {
-            Component[] old_sprites = door.GetComponentsInChildren<SpriteRenderer>(); 
-            for (int i = 0; i < 9; i++)
-            {
-                old_sprites[i] = open_sprites[i];
-            }
+        if (runesCollected == 10 && !doorOpen)
+        { 
+            door.OpenDoor();
+            doorOpen = true;
         }
     }
 
