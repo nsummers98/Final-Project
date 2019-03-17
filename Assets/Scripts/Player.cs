@@ -23,7 +23,6 @@ public class Player : MonoBehaviour
     private float curTime = 0;
     private float nextDamage = 0.5f;
 
-
     void Start()
     {
         door = Door.instance;

@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public float levelStartDelay = 2f;
     public float turnDelay = 0.1f;
     public static GameManager instance = null;
-    public BoardManager boardScript;
+    //public BoardManager boardScript;
     public int playerHP = 100;
     public List<Monster> monsters;
 
@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
         monsters = new List<Monster>(1);
-        boardScript = GetComponent<BoardManager>();
+        //boardScript = GetComponent<BoardManager>();
     }
 
     void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
         Invoke("HideLevelImage", levelStartDelay);
         
         monsters.Clear();
-        boardScript.SetupScene(level);
+        //boardScript.SetupScene(level);
     }
 
     private void HideLevelImage()

@@ -52,6 +52,9 @@ TagManager:
   - name: Items
     uniqueID: 3304815207
     locked: 0
+  - name: Exit
+    uniqueID: 1495169829
+    locked: 0
   - name: Units
     uniqueID: 4044085585
     locked: 0
