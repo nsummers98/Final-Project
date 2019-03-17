@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
     private List<Monster> monsters;
     private int hp;
     private int runesCollected = 0;
+    private float curTime = 0;
+    private float nextDamage = 0.5f;
 
 
     void Start()
@@ -99,17 +101,26 @@ public class Player : MonoBehaviour
 
     }
 
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.tag == "Enemy")
+        {
+            if (curTime <= 0)
+            {
+                hp -= monsters[0].playerDamage;
+                CheckIfGameOver();
+                curTime = nextDamage;
+            }
+            else
+                curTime -= Time.deltaTime;
+        }
+    }
+
     //TODO: Enemy/Player Interactions
 
     private void Restart()
     {
         SceneManager.LoadScene(0);
-    }
-
-    public void LoseHP(int loss)
-    {
-        hp -= loss;
-        CheckIfGameOver();
     }
 
     private void CheckIfGameOver()

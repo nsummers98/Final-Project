@@ -104,7 +104,7 @@ public class BoardManager : MonoBehaviour
         LayoutObjectAtRandom(wallTiles, wallCount.minimum, wallCount.maximum);
         LayoutObjectAtRandom(healthRunes, healthCount.minimum, healthCount.maximum);
         LayoutObjectAtRandom(collectRunes, 10, 10);
-        //LayoutObjectAtRandom(monster, 1, 1);
+        LayoutObjectAtRandom(monster, 1, 1);
         Instantiate(exit, new Vector3(columns - 1.5f, rows + 1f, 0f), Quaternion.identity);
     }
 }

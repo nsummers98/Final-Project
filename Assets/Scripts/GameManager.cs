@@ -16,7 +16,6 @@ public class GameManager : MonoBehaviour
     private int level = 0;
     private Text levelText;
     private GameObject levelImage;
-    private bool doingSetup;
 
     void Awake()
     {
@@ -48,7 +47,6 @@ public class GameManager : MonoBehaviour
 
     void InitGame()
     {
-        doingSetup = true;
         levelImage = GameObject.Find("LevelImage");
         levelText = GameObject.Find("LevelText").GetComponent<Text>();
         levelText.text = "Level " + level;
@@ -62,33 +60,20 @@ public class GameManager : MonoBehaviour
     private void HideLevelImage()
     {
         levelImage.SetActive(false);
-        doingSetup = false;
     }
 
     public void GameOver()
     {
-        levelText.text = "You made it " + level + " levels into the Labyrinth";
+        if (level == 1)
+            levelText.text = "You made it " + level + " level into the Labyrinth";
+        else
+            levelText.text = "You made it " + level + " levels into the Labyrinth";
         levelImage.SetActive(true);
         enabled = false;
-    }
-
-    void Update()
-    {
-        if (doingSetup)
-            return;
-        StartCoroutine(MoveEnemies());
     }
 
     public void AddMonsterToList(Monster script)
     {
         monsters.Add(script);
-    }
-
-    IEnumerator MoveEnemies()
-    {
-        yield return new WaitForSeconds(turnDelay);
-        for (int i = 0; i < monsters.Count; i++)
-            monsters[i].MoveMonster();
-        yield return new WaitForSeconds(turnDelay);
     }
 }

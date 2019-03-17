@@ -22,17 +22,33 @@ public class Monster : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    
+    void Update()
+    {
+        MoveMonster(); 
+    }
+
 
     public void MoveMonster()
     {
         int xDir = 0;
         int yDir = 0;
 
-        if (Mathf.Abs(target.position.x - transform.position.x) < float.Epsilon)
-            yDir = target.position.y > transform.position.y ? -1 : -1;
-        else
-            xDir = target.position.x > transform.position.x ? 1 : -1;
+        if (Mathf.Abs(target.position.y - transform.position.y) < 0.8 && Mathf.Abs(target.position.x - transform.position.x) < 0.8)
+            return;
+        if (Mathf.Abs(target.position.x - transform.position.x) >= float.Epsilon)
+        {
+            if (target.position.x > transform.position.x)
+                xDir = 1;
+            else
+                xDir = -1;
+        }
+        if (Mathf.Abs(target.position.y - transform.position.y) >= float.Epsilon)
+        {
+            if (target.position.y > transform.position.y)
+                yDir = 1;
+            else
+                yDir = -1;
+        }
 
         Move(new Vector2(xDir, yDir));
     }
@@ -48,7 +64,8 @@ public class Monster : MonoBehaviour
         if (hit.transform != null)
             return;
 
-        Vector3 newPosition = new Vector3(end.x, end.y, 0f);
+        Vector2 newPosition = new Vector2(end.x, end.y);
         rb2D.MovePosition(newPosition);
     }
 }
+
