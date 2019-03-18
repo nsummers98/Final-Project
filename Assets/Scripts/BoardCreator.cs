@@ -23,7 +23,7 @@ public class BoardCreator : MonoBehaviour
     public GameObject healthRune;
     public GameObject door;
 
-    private GameObject player;
+    public GameObject player;
     private int runesSpawned = 0;
     private bool spawnRune = false;
     private TileType[][] tiles;                               // A jagged array of tile types representing the board, like a grid.
@@ -34,11 +34,16 @@ public class BoardCreator : MonoBehaviour
     private void Start()
     {
         
+
         //InitBoard();
     }
 
     public void InitBoard()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+
+        runesSpawned = 0;
+
         boardHolder = new GameObject("BoardHolder");
 
         SetupTilesArray();
@@ -115,9 +120,8 @@ public class BoardCreator : MonoBehaviour
                 corridors[i].SetupCorridor(rooms[i], corridorLength, roomWidth, roomHeight, columns, rows, false);
             }
 
-            if (i == rooms.Length * .5f)
+            if (i == rooms.Length - 2)
             {
-                player = GameObject.FindGameObjectWithTag("Player");
                 Vector3 playerPos = new Vector3(rooms[i].xPos + 1, rooms[i].yPos + 1, 0);
                 player.transform.Translate(playerPos);
             }

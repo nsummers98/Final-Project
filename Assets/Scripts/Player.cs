@@ -22,9 +22,11 @@ public class Player : MonoBehaviour
     private int runesCollected = 0;
     private float curTime = 0;
     private float nextDamage = 0.5f;
+    
 
     void Start()
     {
+        runesCollected = 0;
         door = Door.instance;
         bc2D = gameObject.GetComponent<BoxCollider2D>();
         rb2D = gameObject.GetComponent<Rigidbody2D>();
