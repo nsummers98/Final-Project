@@ -22,8 +22,9 @@ public class BoardCreator : MonoBehaviour
     public GameObject[] collectRunes;
     public GameObject healthRune;
     public GameObject door;
-
     public GameObject player;
+    public GameObject monster;
+
     private int runesSpawned = 0;
     private bool spawnRune = false;
     private TileType[][] tiles;                               // A jagged array of tile types representing the board, like a grid.
@@ -88,6 +89,8 @@ public class BoardCreator : MonoBehaviour
         rooms[0].SetupRoom(roomWidth, roomHeight, columns, rows);
 
         Instantiate(door, new Vector3(rooms[0].xPos + 2.5f, rooms[0].yPos + 6f, 0f), Quaternion.identity);
+
+        Instantiate(monster, new Vector3(rooms[0].xPos + 2.5f, rooms[0].yPos + 2, 0f), Quaternion.identity);
 
         // Setup the first corridor using the first room.
         corridors[0].SetupCorridor(rooms[0], corridorLength, roomWidth, roomHeight, columns, rows, true);
