@@ -3,7 +3,7 @@
 
 ## Introduction
 This project is a roguelike 2D dungeon crawler, inspired by the myth of Daedalus's Labyrinth from Greek mythology. It involves a player
-navigating a randomly generated dungeon of rooms in corridors in search of magical runes to unlock the door into the next level. The 
+navigating a randomly generated dungeon of rooms and corridors in search of magical runes to unlock the door into the next level. The 
 game has no defined end and so the player could, in theory, play forever... if they survive that long. Like Daedalus's Labyrinth, the 
 dungeon in the game has a monster prowling through it. The monster deals massive damage to the player, who is unable to attack the 
 ferocious beast and so must resort to outsmarting and outrunning the beast. Fortunately, the player is able to heal himself by 
