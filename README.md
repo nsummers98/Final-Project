@@ -54,6 +54,15 @@ campaign mode of the game.
 The fact that I have so many possibilities of improving and building on the work I've already done was one of the hugely appealing draws
 of developing with Unity.
 
+## Known Bugs
+- The exit door will sometimes be instantiated in the middle of a room. This only happens when a later room is generated on top of the
+starting room such that the door is placed in the middle of the resulting larger room. Very rarely a corridor will appear through the
+door if a later generated room creates a corridor going south into the initially generated room. However, in this case, there is always
+another entrance to the exit room, so that the map is still solvable.
+- The monster's movement is based on the player's x and y position and so has a tendency to get stuck on walls when the player is not
+directly lined up with him on one of the two axes. This would be solvable by implementing an algorithm that acts more as a maze solver
+as opposed to a zombie (i.e. an enemy that simply tracks the player).
+
 ## Tutorials Consulted
 - [Unity 2D Roguelike Tutorial](https://unity3d.com/learn/tutorials/s/2d-roguelike-tutorial)
 - [Basic 2D Dungeon Generation Tutorial](https://unity3d.com/learn/tutorials/topics/scripting/basic-2d-dungeon-generation)
