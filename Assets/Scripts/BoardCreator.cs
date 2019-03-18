@@ -19,25 +19,26 @@ public class BoardCreator : MonoBehaviour
     public GameObject[] floorTiles;                           // An array of floor tile prefabs.
     public GameObject[] wallTiles;                            // An array of wall tile prefabs.
     public GameObject[] outerWallTiles;                       // An array of outer wall tile prefabs.
+    public GameObject[] collectRunes;
+    public GameObject healthRune;
     public GameObject door;
-    private GameObject player;
 
+    private GameObject player;
+    private int runesSpawned = 0;
+    private bool spawnRune = false;
     private TileType[][] tiles;                               // A jagged array of tile types representing the board, like a grid.
     private Room[] rooms;                                     // All the rooms that are created for this board.
     private Corridor[] corridors;                             // All the corridors that connect the rooms.
     private GameObject boardHolder;                           // GameObject that acts as a container for all other tiles.
 
-
-    private void Awake()
-    {
-        player = GameObject.FindGameObjectWithTag("Player");
-    }
-
     private void Start()
     {
         
+        //InitBoard();
+    }
 
-        // Create the board holder.
+    public void InitBoard()
+    {
         boardHolder = new GameObject("BoardHolder");
 
         SetupTilesArray();
@@ -94,6 +95,16 @@ public class BoardCreator : MonoBehaviour
             // Setup the room based on the previous corridor.
             rooms[i].SetupRoom(roomWidth, roomHeight, columns, rows, corridors[i - 1]);
 
+            if (i % 3 == 0)
+                spawnRune = true;
+
+            if (runesSpawned < 10 && spawnRune)
+            {
+                InstantiateFromArray(collectRunes, rooms[i].xPos + 2, rooms[i].yPos + 2);
+                runesSpawned++;
+                spawnRune = false;
+            }
+
             // If we haven't reached the end of the corridors array...
             if (i < corridors.Length)
             {
@@ -106,6 +117,7 @@ public class BoardCreator : MonoBehaviour
 
             if (i == rooms.Length * .5f)
             {
+                player = GameObject.FindGameObjectWithTag("Player");
                 Vector3 playerPos = new Vector3(rooms[i].xPos + 1, rooms[i].yPos + 1, 0);
                 player.transform.Translate(playerPos);
             }

@@ -115,8 +115,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    //TODO: Enemy/Player Interactions
-
     private void Restart()
     {
         SceneManager.LoadScene(0);
