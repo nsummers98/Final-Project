@@ -109,6 +109,8 @@ public class BoardCreator : MonoBehaviour
                 runesSpawned++;
                 spawnRune = false;
             }
+            else if (i % 5 == 0)
+                Instantiate(healthRune, new Vector3(rooms[i].xPos + 2, rooms[i].yPos + 2, 0), Quaternion.identity);
 
             // If we haven't reached the end of the corridors array...
             if (i < corridors.Length)
