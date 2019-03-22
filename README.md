@@ -9,6 +9,15 @@ dungeon in the game has a monster prowling through it. The monster deals massive
 ferocious beast and so must resort to outsmarting and outrunning the beast. Fortunately, the player is able to heal himself by 
 collecting special runes, but should still exercise the utmost caution in avoiding the monster.
 
+## Runes Help
+| ![CollectRune](Assets/Art/kenney_runepack/PNG/Black/Slab/runeBlack_slab_001.png) |
+| :-----: |
+| The collectable runes will look like this with a variety of symbols |
+
+| ![HealthRune](Assets/Art/kenney_runepack/PNG/Grey/Slab/runeGrey_slab_020.png) |
+| :-----: |
+| The health runes will all look exactly like this |
+
 ## Development Process
 While the end product of the game is relatively simple, developing it was anything but. Initially, I knew I wanted to make a 2D 
 Roguelike game, but was faced with the challenge of learning how to use the Unity game engine. I decided on using Unity because it 
