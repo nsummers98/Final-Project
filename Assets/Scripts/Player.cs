@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
     private int hp;
     private int runesCollected = 0;
     private float curTime = 0;
-    private float nextDamage = 0.5f;
+    private float nextDamage = 0.25f;
     
 
     void Start()
