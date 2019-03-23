@@ -18,7 +18,6 @@ public class Monster : MonoBehaviour
     {
         bc2D = gameObject.GetComponent<BoxCollider2D>();
         rb2D = gameObject.GetComponent<Rigidbody2D>();
-        GameManager.instance.AddMonsterToList(this);
         target = GameObject.FindGameObjectWithTag("Player").transform;
     }
 

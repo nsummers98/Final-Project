@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     private bool doorOpen = false;
     private BoxCollider2D bc2D;
     private Rigidbody2D rb2D;
-    private List<Monster> monsters;
+    private Monster monster;
     private int hp;
     private int runesCollected = 0;
     private float curTime = 0;
@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
         door = Door.instance;
         bc2D = gameObject.GetComponent<BoxCollider2D>();
         rb2D = gameObject.GetComponent<Rigidbody2D>();
-        monsters = GameManager.instance.monsters;
+        monster = GameManager.instance.monster;
         hp = GameManager.instance.playerHP;
         healthText.text = "Health: " + hp;
         collectText.text = "Runes: " + runesCollected;
@@ -108,7 +108,7 @@ public class Player : MonoBehaviour
         {
             if (curTime <= 0)
             {
-                hp -= monsters[0].playerDamage;
+                hp -= monster.playerDamage;
                 CheckIfGameOver();
                 curTime = nextDamage;
             }

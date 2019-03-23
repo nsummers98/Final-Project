@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance = null;
     public BoardCreator boardScript;
     public int playerHP = 100;
-    public List<Monster> monsters;
+    public Monster monster;
 
     private int level = 0;
     private Text levelText;
@@ -25,7 +25,6 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
 
         DontDestroyOnLoad(gameObject);
-        monsters = new List<Monster>(1);
         boardScript = GetComponent<BoardCreator>();
     }
 
@@ -53,9 +52,6 @@ public class GameManager : MonoBehaviour
         levelText.text = "Level " + level;
         levelImage.SetActive(true);
         Invoke("HideLevelImage", levelStartDelay);
-        
-        monsters.Clear();
-        //boardScript.InitBoard();
     }
 
     private void HideLevelImage()
@@ -71,10 +67,5 @@ public class GameManager : MonoBehaviour
             levelText.text = "You made it " + level + " levels into the Labyrinth";
         levelImage.SetActive(true);
         enabled = false;
-    }
-
-    public void AddMonsterToList(Monster script)
-    {
-        monsters.Add(script);
     }
 }

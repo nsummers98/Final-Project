@@ -32,13 +32,6 @@ public class BoardCreator : MonoBehaviour
     private Corridor[] corridors;                             // All the corridors that connect the rooms.
     private GameObject boardHolder;                           // GameObject that acts as a container for all other tiles.
 
-    private void Start()
-    {
-        
-
-        //InitBoard();
-    }
-
     public void InitBoard()
     {
         player = GameObject.FindGameObjectWithTag("Player");

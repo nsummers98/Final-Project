@@ -464,6 +464,23 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1324057116628689762, guid: bcba60f3cfe6f9b40b947015d008068a,
         type: 3}
+    - target: {fileID: 2288811916509589301, guid: f0b9a05c056a2a445adaa027b7ceabc3,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1301142911}
+    - target: {fileID: 2288811916509589301, guid: f0b9a05c056a2a445adaa027b7ceabc3,
+        type: 3}
+      propertyPath: monster
+      value: 
+      objectReference: {fileID: 6117672487783957657, guid: 7b65bb006399d244b8b43d2cd4429a26,
+        type: 3}
+    - target: {fileID: 5680967967802535225, guid: f0b9a05c056a2a445adaa027b7ceabc3,
+        type: 3}
+      propertyPath: monster
+      value: 
+      objectReference: {fileID: 5791362353238740073, guid: 7b65bb006399d244b8b43d2cd4429a26,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0b9a05c056a2a445adaa027b7ceabc3, type: 3}
 --- !u!1 &1231876252
@@ -621,7 +638,7 @@ PrefabInstance:
     - target: {fileID: 865922804669477385, guid: 926a593ef9872ef4c985b99e0b62e6e0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -20
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 505818834158947100, guid: 926a593ef9872ef4c985b99e0b62e6e0,
         type: 3}
@@ -636,6 +653,11 @@ PrefabInstance:
     - target: {fileID: 505818834158947100, guid: 926a593ef9872ef4c985b99e0b62e6e0,
         type: 3}
       propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 505818834158947100, guid: 926a593ef9872ef4c985b99e0b62e6e0,
+        type: 3}
+      propertyPath: orthographic
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -706,6 +728,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1301142911 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 309663059714000927, guid: 926a593ef9872ef4c985b99e0b62e6e0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1279076697}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1789771169
 GameObject:
   m_ObjectHideFlags: 0
