@@ -3,7 +3,11 @@ guid: 3005dc70e7d18df4dae8c7a2c0a2b8ff
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - healthRune: {instanceID: 0}
+  - door: {instanceID: 0}
+  - player: {instanceID: 0}
+  - monster: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

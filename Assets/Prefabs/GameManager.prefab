@@ -46,8 +46,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelStartDelay: 2
   turnDelay: 0.1
+  boardScript: {fileID: 0}
   playerHP: 100
-  monsters: []
+  monster: {fileID: 5791362353238740073, guid: 7b65bb006399d244b8b43d2cd4429a26, type: 3}
 --- !u!114 &2288811916509589301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,4 +94,19 @@ MonoBehaviour:
   - {fileID: 5857913367993218040, guid: 0d64d47ebded9bf409416c6ddff8e5df, type: 3}
   - {fileID: 7411853989485820069, guid: 9bad3496265f8594da8a03711a628185, type: 3}
   - {fileID: 2739893765465622825, guid: 0dc4822ee740621459fb576fb95f4d89, type: 3}
+  collectRunes:
+  - {fileID: 3933381034844211213, guid: 3c0ae5e6aa0b6484d98ac30337756259, type: 3}
+  - {fileID: 2601206842067919822, guid: cf93767e3b11c59429272e573ed47bbd, type: 3}
+  - {fileID: 1013032346687769011, guid: 0c1fa359acf5a814d888ded07d388e55, type: 3}
+  - {fileID: 7136313225462715254, guid: 1c84a728be696b645aa28197cfc9e172, type: 3}
+  - {fileID: 3199041489481329347, guid: ae464407c805f8e4db215a6721e61070, type: 3}
+  - {fileID: 5291772219611547602, guid: 3f268d072ddb7294dbe2301d7d95331b, type: 3}
+  - {fileID: 9040204786471121498, guid: 16a835d0a3cdba74790ca9f5a620d117, type: 3}
+  - {fileID: 8280230578590859771, guid: e7be67c14949fe240b67c79b3019b66b, type: 3}
+  - {fileID: 9153718791561833837, guid: daf982144db540f438b2cc6693ebbc22, type: 3}
+  - {fileID: 3703491306757206724, guid: 1dce8b3c67410d2458024afa8fcb27f5, type: 3}
+  healthRune: {fileID: 1324057116628689762, guid: bcba60f3cfe6f9b40b947015d008068a,
+    type: 3}
   door: {fileID: 1677802250536032954, guid: d86267d306788d54db35cfd2fae1c581, type: 3}
+  player: {fileID: 309663059714000927, guid: 926a593ef9872ef4c985b99e0b62e6e0, type: 3}
+  monster: {fileID: 6117672487783957657, guid: 7b65bb006399d244b8b43d2cd4429a26, type: 3}

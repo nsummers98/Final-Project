@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerDamage: 24
-  monsterSpeed: 3.5
+  monsterSpeed: 35
   BlockingLayer:
     serializedVersion: 2
     m_Bits: 256

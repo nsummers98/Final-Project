@@ -635,6 +635,11 @@ PrefabInstance:
       propertyPath: collectText
       value: 
       objectReference: {fileID: 371710678}
+    - target: {fileID: 8900025793279895891, guid: 926a593ef9872ef4c985b99e0b62e6e0,
+        type: 3}
+      propertyPath: playerSpeed
+      value: 70
+      objectReference: {fileID: 0}
     - target: {fileID: 865922804669477385, guid: 926a593ef9872ef4c985b99e0b62e6e0,
         type: 3}
       propertyPath: m_LocalPosition.z
