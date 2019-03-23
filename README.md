@@ -9,6 +9,15 @@ dungeon in the game has a monster prowling through it. The monster deals massive
 ferocious beast and so must resort to outsmarting and outrunning the beast. Fortunately, the player is able to heal himself by 
 collecting special runes, but should still exercise the utmost caution in avoiding the monster.
 
+## Installation and Play
+To install the final build of the game, go (here)[https://1drv.ms/f/s!AvN8dWpClfebgYpnaf1Y1rNl18_yyw] and download the entire contents
+of the folder. To play the game, simply run the "Final Project.exe" file, choose your desired settings, and play. Playing in widowed
+mode is recommended since otherwise you will need to use the keyboard shortcut alt+F4 (or equivalent) to close the program. Controls are 
+listed under the "Input" section of the Final Project Configuration Window, though should be fairly intuitive. Feel free to either use 
+WASD or the arrow keys, whichever your preference is. I initially tried to add the folder to this repository, however due to the git
+settings used elsewhere in the project, it created .meta files for every thing in the folder (about 200 files), which really clogged up
+the repository, so I figured this was a better alternative.
+
 ## Runes Help
 | ![CollectRune](Assets/Art/kenney_runepack/PNG/Black/Slab/runeBlack_slab_001.png) |
 | :-----: |
